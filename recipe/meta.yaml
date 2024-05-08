@@ -1,5 +1,5 @@
 {% set name = "fastapi-cli" %}
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fastapi_cli-{{ version }}.tar.gz
-  sha256: 589565ba758432632eadcf7b950e0ec76bb283b549784d9df17f261a8a9de476
+  sha256: 3b6e4d2c4daee940fb8db59ebbfd60a72c4b962bcf593e263e4cc69da4ea3d7f
 
 build:
   entry_points:
@@ -25,7 +25,7 @@ requirements:
     - python >=3.8
     - typer >=0.12.3
     - fastapi
-    - uvicorn >=0.29.0
+    - uvicorn >=0.15.0
 
 test:
   imports:
