@@ -31,8 +31,10 @@ test:
     - fastapi_cli
   commands:
     - pip check
+    - fastapi --help
   requires:
     - pip
+    - fastapi
 
 about:
   home: https://github.com/tiangolo/fastapi-cli
