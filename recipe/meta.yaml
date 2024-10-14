@@ -14,7 +14,7 @@ build:
     - fastapi = fastapi_cli.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -24,8 +24,7 @@ requirements:
   run:
     - python >=3.8
     - typer >=0.12.3
-    - fastapi
-    - uvicorn >=0.15.0
+    - uvicorn-standard >=0.15.0
 
 test:
   imports:
@@ -35,6 +34,7 @@ test:
     - fastapi --help
   requires:
     - pip
+    - fastapi
 
 about:
   home: https://github.com/tiangolo/fastapi-cli
