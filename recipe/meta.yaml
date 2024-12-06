@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fastapi_cli-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fastapi_cli-{{ version }}.tar.gz
   sha256: d30e1239c6f46fcb95e606f02cdda59a1e2fa778a54b64686b3ff27f6211ff9f
 
 build:
@@ -14,15 +14,15 @@ build:
     - fastapi = fastapi_cli.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pdm-backend
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - typer >=0.12.3
     - uvicorn-standard >=0.15.0
 
@@ -35,6 +35,7 @@ test:
   requires:
     - pip
     - fastapi
+    - python {{ python_min }}
 
 about:
   home: https://github.com/tiangolo/fastapi-cli
