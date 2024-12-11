@@ -18,13 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pdm-backend
     - pip
   run:
     - rich-toolkit >=0.11.1
-    - uvicorn >=0.15.0
-    - python >=3.8
+    - python >={{ python_min }}
     - typer >=0.12.3
     - uvicorn-standard >=0.15.0
 
@@ -37,6 +36,7 @@ test:
   requires:
     - pip
     - fastapi
+    - python {{ python_min }}
 
 about:
   home: https://github.com/tiangolo/fastapi-cli
