@@ -1,5 +1,5 @@
 {% set name = "fastapi-cli" %}
-{% set version = "0.0.6" %}
+{% set version = "0.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fastapi_cli-{{ version }}.tar.gz
-  sha256: 2835a8f0c44b68e464d5cafe5ec205265f02dc1ad1d640db33a994ba3338003b
+  sha256: 02b3b65956f526412515907a0793c9094abd4bfb5457b389f645b0ea6ba3605e
 
 build:
   entry_points:
