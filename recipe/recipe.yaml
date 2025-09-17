@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fastapi-cli
-  version: 0.0.11
+  version: 0.0.12
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fastapi_cli-${{ version }}.tar.gz
-  sha256: 4f01d751c14d3d2760339cca0f45e81d816218cae8174d1dc757b5375868cde5
+  sha256: 09cbc2d171639ce9e489c78ad8a439328993a8f4c9005d78d58498327492aa3a
 
 build:
   number: 0
@@ -29,7 +29,7 @@ requirements:
     - python >=${{ python_min }}
     - rich-toolkit >=0.14.8
     - typer >=0.15.1
-    - uvicorn-standard >=0.15.0
+    - uvicorn >=0.15.0
 tests:
   - python:
       imports:
