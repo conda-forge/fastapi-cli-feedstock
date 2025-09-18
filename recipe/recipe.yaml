@@ -29,7 +29,7 @@ requirements:
     - python >=${{ python_min }}
     - rich-toolkit >=0.14.8
     - typer >=0.15.1
-    - uvicorn >=0.15.0
+    - uvicorn-standard >=0.15.0
 tests:
   - python:
       imports:
