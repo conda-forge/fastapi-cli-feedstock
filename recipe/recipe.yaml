@@ -13,7 +13,7 @@ source:
   sha256: e8a2a1ecf7a4e062e3b2eec63ae34387d1e142d4849181d936b23c4bdfe29073
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -28,6 +28,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - rich-toolkit >=0.14.8
+    - tomli >=2.0.0
     - typer >=0.15.1
     - uvicorn-standard >=0.15.0
 tests:
