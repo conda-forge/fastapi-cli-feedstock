@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fastapi-cli
-  version: "0.0.16"
+  version: "0.0.20"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fastapi_cli-${{ version }}.tar.gz
-  sha256: e8a2a1ecf7a4e062e3b2eec63ae34387d1e142d4849181d936b23c4bdfe29073
+  sha256: d17c2634f7b96b6b560bc16b0035ed047d523c912011395f49f00a421692bc3a
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
